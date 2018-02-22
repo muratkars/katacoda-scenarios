@@ -1,26 +1,24 @@
 {
-  "title": "Hello World Scenario",
-  "description": "Your First Scenario",
-  "difficulty": "beginner",
-  "time": "2 minutes",
+  "title": "Getting started with OpenEBS",
+  "description": "Learn how to provide persistent storage for stateful workloads on Kubernetes",
   "details": {
-    "steps": [{
-      "title": "Step 1 - Run Command",
-      "text": "step1.md"
-    }],
+    "steps": [
+      { "title": "Install OpenEBS", "text": "step1.md" },
+      { "title": "Deploy a demo app", "text": "step2.md" },
+      { "title": "Manage with MayaOnline", "text": "step3.md" }
+    ],
     "intro": {
       "text": "intro.md",
-      "credits": ""
+      "courseData": "env-init.sh"
     },
     "finish": {
       "text": "finish.md"
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "bash"
+    "imageid": "kubernetes"
   }
-}
+}                 
