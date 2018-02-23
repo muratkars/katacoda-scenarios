@@ -2,11 +2,11 @@ Getting started with OpenEBS on your Kubernetes cluster is easy.
 
 Clone the OpenEBS repo from github:
 
-'git clone https://github.com/openebs/openebs.git && cd openebs/k8s`{{execute}}
+`git clone https://github.com/openebs/openebs.git && cd openebs/k8s`{{execute}}
 
 Use the following command to apply OpenEBS operators:
 
-`kubectl apply -f https://openebs.github.io/charts/openebs-operator.yaml`{{execute}}
+`kubectl apply -f openebs-operator.yaml`{{execute}}
 
 Congrats!!! The OpenEBS has been installed. Check its status by running:
 
