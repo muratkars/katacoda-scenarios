@@ -1,6 +1,8 @@
 {
   "title": "Getting started with OpenEBS",
   "description": "Learn how to provide persistent storage for stateful workloads on Kubernetes",
+  "difficulty": "beginner",
+  "time": "3-5 minutes",
   "details": {
     "steps": [
       { "title": "Install OpenEBS", "text": "step1.md" },
@@ -19,6 +21,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "kubernetes-cluster"
   }
 }
