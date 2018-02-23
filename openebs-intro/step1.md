@@ -6,7 +6,7 @@ Clone the OpenEBS repo from github:
 
 Use the following command to apply OpenEBS operators:
 
-`kubectl apply -f openebs-operator.yaml`{{execute}}
+`kubectl apply -f openebs-operator.yaml `{{execute}}
 
 Congrats!!! The OpenEBS has been installed. Check its status by running:
 
@@ -15,7 +15,7 @@ Congrats!!! The OpenEBS has been installed. Check its status by running:
 **Optional:***
 Use the following command to apply predefined OpenEBS storage classes:
 
-`kubectl apply -f https://openebs.github.io/charts/openebs-operator.yaml`{{execute}}
+`kubectl apply -f openebs-storageclasses.yaml `{{execute}}
 
 Check available storae classes by running:
 
