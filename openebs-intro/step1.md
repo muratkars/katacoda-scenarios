@@ -8,7 +8,7 @@ Getting started with OpenEBS on your Kubernetes cluster is easy.
 
 `kubectl apply -f openebs-operator.yaml `{{execute}}
 
-Congrats!!! The OpenEBS has been installed. Check its status by running:
+Congratulations!!! The OpenEBS has been installed. Check its status by running:
 
 `kubectl get pods -l "name=maya-apiserver" `{{execute}}
 

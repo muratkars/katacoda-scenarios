@@ -1,7 +1,7 @@
-This is your last step.
+Now we will add our cluster to MayaOnline and manage .
 
-## Task
+1) Create an account on MayaOnline.io.
 
-This is an _example_ of creating a scenario and running a **command**
+2) TODO
 
-`echo 'Hello World'`{{execute}}
+That's it!!
