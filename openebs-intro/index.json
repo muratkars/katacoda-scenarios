@@ -18,7 +18,7 @@
       "text": "finish.md"    }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal-terminal"
   },
   "backend": {
     "imageid": "kubernetes-cluster"
