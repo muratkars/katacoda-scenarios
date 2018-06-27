@@ -1,1 +1,1 @@
-ssh root@[[HOST2_IP]] "kubeadm reset"
+apt-get install open-iscsi
