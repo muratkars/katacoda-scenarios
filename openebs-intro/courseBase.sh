@@ -1,1 +1,1 @@
-apt-get install open-iscsi
+sudo apt-get -y install open-iscsi
