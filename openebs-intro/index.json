@@ -5,7 +5,7 @@
   "time": "3-5 minutes",
   "details": {
     "steps": [
-      { "title": "Install OpenEBS", "text": "step1.md" },
+      { "title": "Install OpenEBS", "text": "step1.md", "courseData": "courseBase.sh" },
       { "title": "Deploy a stateful workload", "text": "step2.md" },
       { "title": "Manage with MayaOnline", "text": "step3.md" }
     ],
