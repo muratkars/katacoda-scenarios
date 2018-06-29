@@ -125,56 +125,6 @@ echo '  "metadata": {' >> ~/kube-system.json
 echo '    "name": "kube-system"' >> ~/kube-system.json
 echo '  }' >> ~/kube-system.json
 echo '}' >> ~/kube-system.json
-echo 'kind: List' >> ~/dashboard.yaml
-echo 'apiVersion: v1' >> ~/dashboard.yaml
-echo 'items:' >> ~/dashboard.yaml
-echo '- kind: ReplicationController' >> ~/dashboard.yaml
-echo '  apiVersion: v1' >> ~/dashboard.yaml
-echo '  metadata:' >> ~/dashboard.yaml
-echo '    labels:' >> ~/dashboard.yaml
-echo '      app: kubernetes-dashboard' >> ~/dashboard.yaml
-echo '      version: v1.0.1' >> ~/dashboard.yaml
-echo '    name: kubernetes-dashboard' >> ~/dashboard.yaml
-echo '    namespace: kube-system' >> ~/dashboard.yaml
-echo '  spec:' >> ~/dashboard.yaml
-echo '    replicas: 1' >> ~/dashboard.yaml
-echo '    selector:' >> ~/dashboard.yaml
-echo '      app: kubernetes-dashboard' >> ~/dashboard.yaml
-echo '    template:' >> ~/dashboard.yaml
-echo '      metadata:' >> ~/dashboard.yaml
-echo '        labels:' >> ~/dashboard.yaml
-echo '          app: kubernetes-dashboard' >> ~/dashboard.yaml
-echo '      spec:' >> ~/dashboard.yaml
-echo '        containers:' >> ~/dashboard.yaml
-echo '        - name: kubernetes-dashboard' >> ~/dashboard.yaml
-echo '          image: gcr.io/google_containers/kubernetes-dashboard-amd64:v1.0.1' >> ~/dashboard.yaml
-echo '          imagePullPolicy: Always' >> ~/dashboard.yaml
-echo '          ports:' >> ~/dashboard.yaml
-echo '          - containerPort: 9090' >> ~/dashboard.yaml
-echo '            protocol: TCP' >> ~/dashboard.yaml
-echo '          args:' >> ~/dashboard.yaml
-echo '            - --apiserver-host=[[HOST_IP]]:8080' >> ~/dashboard.yaml
-echo '          livenessProbe:' >> ~/dashboard.yaml
-echo '            httpGet:' >> ~/dashboard.yaml
-echo '              path: /' >> ~/dashboard.yaml
-echo '              port: 9090' >> ~/dashboard.yaml
-echo '            initialDelaySeconds: 30' >> ~/dashboard.yaml
-echo '            timeoutSeconds: 30' >> ~/dashboard.yaml
-echo '- kind: Service' >> ~/dashboard.yaml
-echo '  apiVersion: v1' >> ~/dashboard.yaml
-echo '  metadata:' >> ~/dashboard.yaml
-echo '    labels:' >> ~/dashboard.yaml
-echo '      app: kubernetes-dashboard' >> ~/dashboard.yaml
-echo '      kubernetes.io/cluster-service: "true"' >> ~/dashboard.yaml
-echo '    name: kubernetes-dashboard' >> ~/dashboard.yaml
-echo '    namespace: kube-system' >> ~/dashboard.yaml
-echo '  spec:' >> ~/dashboard.yaml
-echo '    type: NodePort' >> ~/dashboard.yaml
-echo '    ports:' >> ~/dashboard.yaml
-echo '    - port: 80' >> ~/dashboard.yaml
-echo '      targetPort: 9090' >> ~/dashboard.yaml
-echo '    selector:' >> ~/dashboard.yaml
-echo '      app: kubernetes-dashboard' >> ~/dashboard.yaml
 echo 'echo "Starting Kubernetes v1.2.2..."' >> ~/.bin/launch.sh
 echo 'docker run -d --net=host gcr.io/google_containers/etcd:2.2.1 /usr/local/bin/etcd --listen-client-urls=http://0.0.0.0:4001 --advertise-client-urls=http://0.0.0.0:4001 --data-dir=/var/etcd/data' >> ~/.bin/launch.sh
 echo 'docker run -d --name=api --net=host --pid=host --privileged=true gcr.io/google_containers/hyperkube:v1.2.2 /hyperkube apiserver --insecure-bind-address=0.0.0.0 --service-cluster-ip-range=10.0.0.1/24 --etcd_servers=http://127.0.0.1:4001 --v=2' >> ~/.bin/launch.sh
