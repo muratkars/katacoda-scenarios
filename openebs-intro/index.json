@@ -28,7 +28,7 @@
             "text": "finish.md"
         },
         "assets": {
-          "host01": [{"file": "dashboard.yaml", "target": "/root"}]
+          "host01": [{"file": "launch.sh", "target": "/usr/bin/", "chmod": "+x"}]
         }
     },
     "environment": {
@@ -36,6 +36,6 @@
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands.\u001b[m\r\n"
     },
     "backend": {
-        "imageid": "kubernetes-running"
+        "imageid": "minikube-running"
     }
 }
